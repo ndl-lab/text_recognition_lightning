@@ -1,0 +1,21 @@
+# @package _global_
+
+defaults:
+  - _self_
+  - datamodule: ndl_nlp_cli.yaml
+  - model: bert.yaml
+  - tokenizer: default.yaml
+  - logger: null
+  - trainer: transformer.yaml
+  - paths: cli.yaml
+  - extras: default.yaml
+  - hydra: default.yaml
+
+task_name: "xml"
+
+tags: ["dev"]
+
+# passing checkpoint path is necessary for evaluation
+ckpt_path: ??? # submodules/text_recognition_lightning/model/resnet-orient.ckpt
+target:
+  - ???

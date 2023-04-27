@@ -1,0 +1,11 @@
+_target_: ${paths.target_src}.models.ctc_module.OrientCTCLitModule
+character_file: ${paths.data_dir}/mojilist_NDL.txt
+ambiguous_char: 〓
+lr: 1.0
+batch_max_length: ${datamodule.batch_max_length}
+test_batch_max_length: ${datamodule.test_batch_max_length}
+
+net:
+  _target_: ${paths.target_src}.models.components.resnet.ResNet_FeatureExtractor
+  input_size: 3
+  output_size: 512

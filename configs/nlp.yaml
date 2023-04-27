@@ -1,0 +1,23 @@
+# @package _global_
+
+defaults:
+  - _self_
+  - datamodule: ndl_nlp.yaml
+  - model: bert.yaml
+  - tokenizer: default.yaml
+  - callbacks: post_model.yaml
+  - logger: csv.yaml
+  - trainer: transformer.yaml
+  - paths: default.yaml
+  - extras: default.yaml
+  - hydra: default.yaml
+
+# task_name: "eval"
+task_name: ???
+
+tags: ["dev"]
+
+# passing checkpoint path is necessary for evaluation
+ckpt_path: ???
+target:
+  - ???

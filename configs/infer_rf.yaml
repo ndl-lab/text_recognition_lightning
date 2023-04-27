@@ -1,0 +1,19 @@
+# @package _global_
+
+defaults:
+  - _self_
+  - datamodule: ndl_rf_cli.yaml
+  - model: randomforest.yaml
+  - logger: null
+  - trainer: default.yaml
+  - paths: cli.yaml
+  - extras: default.yaml
+  - hydra: default.yaml
+
+task_name: "xml"
+
+tags: ["dev"]
+
+# passing checkpoint path is necessary for evaluation
+target:
+  - ???

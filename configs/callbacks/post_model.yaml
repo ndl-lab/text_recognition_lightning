@@ -1,0 +1,11 @@
+post_model:
+  _target_: ${paths.target_src}.models.components.post_model.PostModel
+  model_path: null
+  using_label:
+    - X
+    - Y
+    - LEN
+    - WIDTH
+    - HEIGHT
+    - AWIDTH
+    - AHEIGHT

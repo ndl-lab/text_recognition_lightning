@@ -1,0 +1,6 @@
+_target_: transformers.AutoModelForSequenceClassification.from_pretrained
+pretrained_model_name_or_path: ${ckpt_path}
+config:
+  _target_: transformers.AutoConfig.from_pretrained
+  pretrained_model_name_or_path: ${ckpt_path}
+  num_label: 2

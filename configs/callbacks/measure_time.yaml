@@ -1,0 +1,2 @@
+measuretime:
+  _target_: ${paths.target_src}.callbacks.measure_time.MeasureTimeCallback

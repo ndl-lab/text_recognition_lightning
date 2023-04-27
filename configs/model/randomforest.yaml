@@ -1,0 +1,2 @@
+_target_: sklearn.ensemble.RandomForestClassifier
+# class_weight: balanced

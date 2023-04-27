@@ -1,0 +1,22 @@
+# --------- pytorch --------- #
+torch>=1.10.0
+torchvision>=0.11.0
+pytorch-lightning==1.6.5
+
+# --------- hydra --------- #
+hydra-core==1.2.0
+hydra-colorlog==1.2.0
+
+# --------- data --------- #
+pandas
+
+# --------- nlp --------- #
+transformers['ja']
+datasets
+evaluate
+joblib
+scikit-learn
+
+# --------- others --------- #
+pyrootutils     # standardizing the project root setup
+rich            # beautiful text formatting in terminal

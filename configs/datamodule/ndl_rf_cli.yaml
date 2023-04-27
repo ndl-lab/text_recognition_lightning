@@ -1,0 +1,15 @@
+_target_: ${paths.target_src}.datamodules.xml_datamodule_without_image.from_tree
+tree:
+    - ???
+text: STRING
+labels:
+  - X
+  - Y
+  - LEN
+  - WIDTH
+  - HEIGHT
+  - AWIDTH
+  - AHEIGHT
+  - ${target}
+target: ${target}
+downsampling_rate: null

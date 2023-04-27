@@ -1,0 +1,17 @@
+_target_: ${paths.target_src}.datamodules.xml_datamodule.NDLDataModule
+
+dataset:
+  pred:
+    - dataset_class: cli
+
+batch_size: 128
+num_workers: 1
+pin_memory: True
+batch_max_length: 40
+test_batch_max_length: 160
+test_max_width: 1600
+swap_bgr2rgb: True
+character_file: ${model.character_file}
+additional_elements:
+  - BLOCK[@TYPE="ノンブル"]
+  - BLOCK[@TYPE="柱"]

@@ -1,0 +1,11 @@
+_target_: ${paths.target_src}.datamodules.xml_datamodule_without_image.from_tree
+
+tree:
+    - ???
+text: STRING
+labels:
+  - TITLE
+  - AUTHOR
+target: "TITLE"
+downsampling_rate: 10
+

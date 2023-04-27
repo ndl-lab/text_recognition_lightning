@@ -1,0 +1,14 @@
+_target_: transformers.Trainer
+args:
+  _target_: transformers.TrainingArguments
+  output_dir: ${paths.output_dir}
+  num_train_epochs: 6
+  per_device_train_batch_size: 64
+  per_device_eval_batch_size: 32
+  save_strategy: epoch
+  logging_strategy: epoch
+  evaluation_strategy: epoch
+  save_total_limit: 2
+  load_best_model_at_end: True
+  metric_for_best_model: f1
+  dataloader_num_workers: 4

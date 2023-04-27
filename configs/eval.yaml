@@ -1,0 +1,31 @@
+# @package _global_
+
+defaults:
+  - _self_
+  - datamodule: ndl.yaml # choose datamodule with `test_dataloader()` for evaluation
+  - model: ctc.yaml
+  - callbacks: 
+    - rich_progress_bar.yaml
+    - measure_time.yaml
+  - logger: csv.yaml
+  - trainer: default.yaml
+  - paths: default.yaml
+  - extras: default.yaml
+  - hydra: default.yaml
+
+  # optional local config for machine/user specific settings
+  # it's optional since it doesn't need to exist and is excluded from version control
+  - optional local: default.yaml
+
+task_name: "eval"
+
+tags: ["dev"]
+
+# passing checkpoint path is necessary for evaluation
+ckpt_path: ???
+task: "eval"  # eval, xml, render
+render:
+  _target_: ${paths.target_src}.utils.draw_utils.get_render
+  task: ${task}
+  font_path: null
+  output_dir: ${paths.output_dir}/${task}

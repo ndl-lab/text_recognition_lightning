@@ -1,0 +1,16 @@
+_target_: ${paths.target_src}.datamodules.xml_datamodule_without_image.from_pd
+data_dirs:
+text: STRING
+labels:
+  - TITLE
+  - AUTHOR
+  # uncomment out below args if using bert+rf model
+  # - X
+  # - Y
+  # - LEN
+  # - WIDTH
+  # - HEIGHT
+  # - AWIDTH
+  # - AHEIGHT
+target: ${target}
+downsampling_rate: 10
