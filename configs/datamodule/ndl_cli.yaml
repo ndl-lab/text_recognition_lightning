@@ -4,7 +4,7 @@ dataset:
   pred:
     - dataset_class: cli
 
-batch_size: 128
+batch_size: 16
 num_workers: 1
 pin_memory: True
 batch_max_length: 40
